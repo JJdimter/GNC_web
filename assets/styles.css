@@ -2,12 +2,11 @@
     --section-padding: 2rem;
 }
 /* General styles */
-h1 {
-    font-family: 'Alex Brush', cursive; /* Cambia la fuente a Alex Brush */
-    font-size: 4.7rem;
-    color: #244178; 
-    text-align: center;
-    margin: 2vh 0;
+body {
+    font-family: libertinus-serif, serif; 
+    background-color: #ffffff; 
+    color: #333333; 
+    line-height: 1.6;
 }
 
 * {
@@ -102,6 +101,12 @@ header ul li a:hover {
 
 .hero h1{
     text-shadow: 2px 2px 8px #000000b3; /* Sombra al texto */
+    font-size: 3rem;
+    font-family: 'Alex Brush', cursive; /* Cambia la fuente a Alex Brush */
+    font-size: 3.5rem;
+    color: #244178; 
+    text-align: center;
+    margin: 2vh 0;
 }
 
 /* Main content styles */
