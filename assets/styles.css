@@ -31,10 +31,13 @@ button {
 
 /* Header styles */
 header {
-    display: flex;
+    display: grid;
     padding: 1vh;
     background: #e8e3dd;
-    height: 13vh;
+    height: 15vh;
+    align-items: top;
+    grid-template-columns: auto 1fr;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 header img {
     height: 5rem; /* Altura fija */
@@ -113,19 +116,22 @@ header img {
         height: auto;
         background: none;
         box-shadow: none;
-        transform: none;
+        transform: translateX(0);
         flex-direction: row;
         align-items: center;
         padding: 0;
-        display: flex;
+        margin-left: auto;
+        justify-content: flex-end;
+        margin-right: 10px;
     }
     .sidebar-menu nav ul {
         display: flex;
         justify-content: flex-end;
         gap: 2vw;
         list-style: none;
-        padding: 0;
-        margin: 0;
+        padding: 0%;
+        margin: 3px;
+        align-items: top;
     }
 
 header ul {
