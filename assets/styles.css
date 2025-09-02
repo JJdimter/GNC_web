@@ -43,13 +43,90 @@ header img {
     margin-right: 2vw;
 }
 
-header nav {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    width: 100%;
-    padding: 10px;
+/* Oculta el checkbox */
+.menu-toggle {
+    display: none;
 }
+
+/* Icono del menú */
+.menu-icon {
+    font-size: 2rem;
+    color: #27467f;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 1rem;
+    display: block;
+    z-index: 101;
+    user-select: none; /* Evita selección de texto al hacer clic */
+}
+
+/* Sidebar oculto por defecto */
+.sidebar-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70vw;
+    height: 100vh;
+    background: #e8e3dd;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+    z-index: 100;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 2rem 1rem;
+}
+.sidebar-menu nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.sidebar-menu nav ul li {
+    margin: 1.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 100%;
+}
+.sidebar-menu nav ul li a {
+    text-decoration: none;
+    color: #656565;
+    transition: color 0.3s ease;
+    width: 100%;
+    display: block;
+}
+
+/* Cuando el checkbox está checked, muestra el sidebar */
+.menu-toggle:checked ~ .sidebar-menu {
+    transform: translateX(0);
+}
+
+/* Desktop: menú tradicional alineado a la derecha */
+@media (min-width: 600px) {
+    .menu-icon {
+        display: none;
+    }
+    .sidebar-menu {
+        position: static;
+        width: auto;
+        height: auto;
+        background: none;
+        box-shadow: none;
+        transform: none;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        display: flex;
+    }
+    .sidebar-menu nav ul {
+        display: flex;
+        justify-content: flex-end;
+        gap: 2vw;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
 
 header ul {
     display: flex;
@@ -72,6 +149,8 @@ header ul li a {
 header ul li a:hover {
     color: #27467f; /* Cambia el color al pasar el mouse */
     text-decoration: underline;
+
+}
 }
 
 /* Hero styles */
@@ -81,7 +160,7 @@ header ul li a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 40vh;
+    height: 45vh;
     background: none; /* Elimina el fondo aquí */
     color: #fff;
 }
@@ -350,19 +429,14 @@ header ul li a:hover {
     margin-bottom: 1rem;
 }
 .jesus-pago-deudas iframe {
-    width: 100%;
-    height: 70vh; /* Altura fija para el iframe */
-    border: none;
-    border-radius: 8px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    display: none; /* Oculta el iframe en pantallas pequeñas */
 }
 .jesus-pago-deudas p {
     font-size: 1.2rem;
     color: #656565;
     margin-top: 1rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 550px) {
 .tratados {
         flex-direction: row; /* Cambia a fila en pantallas grandes */
         flex-wrap: wrap; /* Permite que los artículos se envuelvan */
@@ -428,3 +502,4 @@ footer {
     max-width: 2rem;
     max-height: 2rem;
 }
+
