@@ -217,6 +217,26 @@ header ul li a:hover {
     color: #27467f;
     margin-bottom: 1rem;
 }
+.about-sections img {
+    width: 100%;
+    height: 55vh; /* Altura fija para las imágenes */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    border-radius: 8px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .about-sections img {
+        width: 50%;
+        height: 60vh; /* Altura fija para las imágenes */
+        object-fit: cover; /* Mantiene la proporción de la imagen */
+        border-radius: 8px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
 .about-sections p {
     font-size: 1.2rem;
     color: #656565;
