@@ -1,0 +1,129 @@
+$alternatecolor: #e0e0e0;
+$secondarycolor: #27467f;
+$accentcolor: #656565;
+$fontstack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+/* Header Styles */
+header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 1vh;
+  background:$alternatecolor;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+header img {
+  height: 5rem;
+  width: auto;
+  max-width: 100%;
+  margin-right: 2vw;
+}
+
+.menu-toggle {
+  display: none; /* Hidden by default */
+}
+
+/*Icono menú*/
+.menu.icon {
+  font-size: 2rem;
+  color:$secondarycolor;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 1rem;
+  display:block;
+  z-index: 101;
+  user-select: none; /* Evita la selección de texto al hacer clic */
+}
+/* Navegación */
+.sidebar-menu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+  top: 0;
+  left: 0;
+  width: 70vw;
+  height: 100vh;
+  background: $alternatecolor;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+.sidebar-menu nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.sidebar-menu nav ul li {
+    margin: 1.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 100%;
+}
+.sidebar-menu nav ul li a {
+    text-decoration: none;
+    color: $accentcolor;
+    transition: color 0.3s ease;
+    width: 100%;
+    display: block;
+}
+
+.menu-toggle:checked ~ .sidebar-menu {
+    transform: translateX(0); /* Muestra el menú al marcar el checkbox */
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 750px) {
+    .menu-icon {
+        display: none;
+    }
+    .sidebar-menu {
+        position: static;
+        width: auto;
+        height: auto;
+        background: none;
+        box-shadow: none;
+        transform: translateX(0);
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        margin-left: auto;
+        justify-content: flex-end;
+        margin-right: 10px;
+    }
+    .sidebar-menu nav ul {
+        display: flex;
+        justify-content: flex-end;
+        gap: 2vw;
+        list-style: none;
+        padding: 0%;
+        margin: 3px;
+        align-items: top;
+    }
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    gap: 2vw;
+}
+
+header ul li {
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+header ul li a {
+    text-decoration: none;
+    color: $accentcolor;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: $secondarycolor; /* Cambia el color al pasar el mouse */
+    text-decoration: underline;
+
+}
+}

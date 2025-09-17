@@ -1,0 +1,52 @@
+$lightmode-primary: #ffffff;
+$titlecolor: #39aaeb;
+$titlefont: 'Alex Brush', cursive;
+
+$background-image: url('./img/background_img_alt.JPG');
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 45vh;
+    background: none; /* Elimina el fondo aquí */
+    color: $lightmode-primary;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: $background-image;
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px); /* Ajusta el nivel de blur */
+    z-index: 0;
+}
+
+.hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+.hero-content {
+    background: #000000a4; /* Fondo semitransparente */
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px #00000085;
+}
+
+.hero h1{
+    text-shadow: 4px 4px 10px #000000b3; /* Sombra al texto */
+    font-size: 3rem;
+    font-family: $titlefont; /* Cambia la fuente a Alex Brush */
+    font-size: 3.5rem;
+    color: $titlecolor; 
+    text-align: center;
+    margin: 2vh 0;
+}
