@@ -1,0 +1,100 @@
+@use 'sass:color';
+$bgcolor: #f5f5f5;
+$fontcolor: #656565;
+$fontfamily: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$fontfamilyalt: 'Georgia', serif;
+$fontsize: 14px;
+$fontsizealt: 16px;
+$fontsizeh1: 32px;
+$fontsizeh2: 24px;
+$section-padding: 20px;
+$margin-bottom: 15px;
+
+.index.main {
+    display: flex;
+    flex-direction: column;
+    padding: var(--section-padding);
+    background: $bgcolor;
+    color: $fontcolor;
+    font-family: $fontfamily;
+    font-size: $fontsize;
+}
+
+.index.main p {
+    margin-bottom: $margin-bottom;
+    font-size: $fontsize; 
+    font-family: $fontfamily;
+    color:$fontcolor;
+    line-height: 1.6;
+}
+
+.index-title {
+    text-align: center;
+    font-size: $fontsizeh1;
+    margin: 2vh 0;
+    color: color.adjust($bgcolor, $lightness: -30%);
+    order: 0; // Ensure title is at the top
+    font-family: $fontfamilyalt;
+}
+
+.index-sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2vw;
+    margin-top: 2vh;
+}
+
+.card-highlight-coffee, .card-highlight-tea, .card-highlight-accessories {
+    width: 100%;
+    background: #fff;
+    border-radius: 12px;
+    padding: var(--section-padding);
+    margin: 1rem 0;
+    flex: 1;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.index-sections img {
+    width: 100%;
+    height: 55vh; /* Altura fija para las imágenes */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    border-radius: 8px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.index-sections h3 {
+    font-size: 1.8rem;
+    color: #27467f; /* Color del subtítulo */
+}
+
+@media (min-width: 768px) {
+.index-sections {
+        flex-direction: row; /* Cambia a fila en pantallas grandes */
+    }
+
+.card-highlight-coffee, .card-highlight-tea, .card-highlight-accessories {
+    width: 25%;
+    background: #fff;
+    border-radius: 12px;
+    padding: var(--section-padding);
+    margin: 1rem 0;
+    flex: 1;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.index-sections img {
+    width: 100%;
+    height: 55vh; /* Altura fija para las imágenes */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    border-radius: 8px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.index-sections h3 {
+    font-size: 1.8rem;
+    color: #27467f; /* Color del subtítulo */
+}
+}
