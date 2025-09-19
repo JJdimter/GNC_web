@@ -1,0 +1,41 @@
+$bgcolor: #e8e3dd;
+$color: #656565;
+$font-family: 'Arial', sans-serif;
+$font-size: 14px;
+$line-height: 1.5;
+$padding: 20px;
+$text-align: center;
+$border-top: 1px solid #ccc;
+$margin-top: 20px;
+$footer-height: 60px;
+$footer-link-color: #007BFF;
+
+footer{
+    background: $bgcolor;
+    padding: $padding;
+    text-align: $text-align;
+    font-size: $font-size;
+    color: $color;
+    font-family: $font-family; 
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+.social-links li{
+    display: inline-block;
+    margin: 1vh 1vw;
+}
+.social-links li a img{
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    aspect-ratio: 1/1;
+    max-width: 2rem;
+    max-height: 2rem;
+}
