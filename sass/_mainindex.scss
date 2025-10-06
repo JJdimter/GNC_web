@@ -1,6 +1,6 @@
 @use 'sass:color';
 $bgcolor: #f5f5f5;
-$fontcolor: #656565;
+$fontcolor: #27467f;
 $fontfamily: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $fontfamilyalt: 'Georgia', serif;
 $fontsize: 12px;
@@ -32,9 +32,10 @@ $margin-bottom: 1rem;
     text-align: center;
     font-size: $fontsizeh1;
     margin: 2vh 0;
-    color: color.adjust($bgcolor, $lightness: -30%);
+    color: $fontcolor;
+    font-weight: bold;
     order: 0; // Ensure title is at the top
-    font-family: $fontfamilyalt;
+    font-family: $fontfamily;
 }
 
 .index-sections {
